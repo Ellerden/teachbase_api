@@ -1,20 +1,20 @@
 .col-12
-  h1.text-muted.p-2 Все открытые курсы
+  .row.pt-4.pl-4
+    h1.text-muted Все открытые курсы
   .row
     .course-list.d-flex
       - @courses.each do |course|
-        .course.col.p-4
+        .course.col-md-4.p-4
           - if course.thumb_url?
             = image_tag(course.thumb_url, class: 'course-thumbnail')
           - else
-            = image_tag('teachbase.jpeg', class: 'course-thumbnail')
+            = image_tag('default_course_cover.svg', class: 'course-thumbnail')
           h3.text-muted = course.name
           p = course.description
           p.text-muted = "#{course.started_at.to_s(:d_m_y)} — #{course.finished_at.to_s(:d_m_y)}"
           p = link_to 'К курсу', course.apply_url, class: 'btn btn-success',
             target: '_blank'
-
   .row
-    .col-sm-6.col-md-4
-    - unless @server_downtime
-      = paginate @courses, theme: 'twitter-bootstrap-4'
+    .col.pl-4
+      - unless @server_downtime
+        = paginate @courses, theme: 'twitter-bootstrap-4'

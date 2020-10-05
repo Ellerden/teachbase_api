@@ -30,6 +30,6 @@ ActiveRecord::Schema.define(version: 20_201_001_205_959) do
     t.datetime 'finished_at'
     t.datetime 'created_at', precision: 6, default: -> { 'CURRENT_TIMESTAMP' }, null: false
     t.datetime 'updated_at', precision: 6, default: -> { 'CURRENT_TIMESTAMP' }, null: false
-    t.index %w[course_id access_type], name: 'course_index', unique: true
+    t.index %w[course_id access_type apply_url], name: 'course_index', unique: true
   end
 end

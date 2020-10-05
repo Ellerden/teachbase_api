@@ -18,6 +18,6 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.timestamps default: -> { 'CURRENT_TIMESTAMP' }
     end
 
-    add_index :courses, %i[course_id access_type], name: 'course_index', unique: true
+    add_index :courses, %i[course_id access_type apply_url], name: 'course_index', unique: true
   end
 end

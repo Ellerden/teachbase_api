@@ -4,6 +4,7 @@ require 'rest-client'
 
 class TeachbaseService
   ROOT_ENDPOINT = 'https://s1.teachbase.ru'
+  PER_PAGE = 4
 
   attr_accessor :errors
 
@@ -20,12 +21,9 @@ class TeachbaseService
 
     connect(params)
     courses_json = [] || params['loaded_courses']
-    while params[:page] <= @total_pages
-      courses_json << convert_to_json(@resp.body)
-      call(page: params[:page] + 1, per_page: Course::PER_PAGE, loaded_courses: courses_json) unless params[:page] == @total_pages
-      break
-    end
-    save_courses(courses_json.flatten)
+    courses_json << convert_to_json(@resp.body)
+    call(page: params[:page] + 1, per_page: 4, loaded_courses: courses_json) if params[:page] < @total_pages
+    save_courses(courses_json.flatten) unless courses_json.empty?
     self
   end
 
