@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :course do
     sequence(:course_id) { |n| n }
     sequence(:name) { |n| "CourseName#{n}" }

@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://s1.teachbase.ru/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id[client_key]=false_key&client_secret=bb7966f39349a2406c6d428f134c52bc71d4e4c53565ddb97efd7fa078a97090
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Content-Length:
+      - '140'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 21:24:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Host-Signature:
+      - dbdf0e8172df0870dba1dfc451f2ac9ae59fff8893cb59a9c4888e73418020a5
+      Cache-Control:
+      - private, no-store
+      Pragma:
+      - no-cache
+      Www-Authenticate:
+      - Bearer realm="Doorkeeper", error="invalid_client", error_description="Client
+        authentication failed due to unknown client, no client authentication included,
+        or unsupported authentication method."
+      X-Request-Id:
+      - c62a5ffb-4b52-4b89-9d84-d3a3d0b5189f
+      X-Runtime:
+      - '0.027767'
+      X-Rack-Cache:
+      - invalidate, pass
+    body:
+      encoding: UTF-8
+      string: '{"error":"invalid_client","error_description":"Client authentication
+        failed due to unknown client, no client authentication included, or unsupported
+        authentication method."}'
+  recorded_at: Mon, 05 Oct 2020 21:24:49 GMT
+recorded_with: VCR 6.0.0

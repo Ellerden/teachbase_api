@@ -18,3 +18,9 @@ Documentation:
   Enabled: false
 AllCops:
   NewCops: enable
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'

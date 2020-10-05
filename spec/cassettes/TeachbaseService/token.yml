@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://s1.teachbase.ru/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=f2289ec45da71c85f7841f3760bc0b7426e18ca63f3167c00ed77643b199d39e&client_secret=bb7966f39349a2406c6d428f134c52bc71d4e4c53565ddb97efd7fa078a97090
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 21:05:19 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Host-Signature:
+      - dbdf0e8172df0870dba1dfc451f2ac9ae59fff8893cb59a9c4888e73418020a5
+      Cache-Control:
+      - private, no-store
+      Pragma:
+      - no-cache
+      X-Request-Id:
+      - f9a231c6-fe42-4b75-b430-545cca1877d7
+      X-Runtime:
+      - '0.057351'
+      X-Rack-Cache:
+      - invalidate, pass
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d","token_type":"Bearer","created_at":1493026220,"resource_owner_id":71}'
+  recorded_at: Mon, 05 Oct 2020 21:05:19 GMT
+recorded_with: VCR 6.0.0

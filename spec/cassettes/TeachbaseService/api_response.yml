@@ -1,0 +1,569 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://s1.teachbase.ru/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=f2289ec45da71c85f7841f3760bc0b7426e18ca63f3167c00ed77643b199d39e&client_secret=bb7966f39349a2406c6d428f134c52bc71d4e4c53565ddb97efd7fa078a97090
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 20:51:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Host-Signature:
+      - dbdf0e8172df0870dba1dfc451f2ac9ae59fff8893cb59a9c4888e73418020a5
+      Cache-Control:
+      - private, no-store
+      Pragma:
+      - no-cache
+      X-Request-Id:
+      - bf14f125-d913-4f22-8dfc-efac37614e05
+      X-Runtime:
+      - '0.096852'
+      X-Rack-Cache:
+      - invalidate, pass
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d","token_type":"Bearer","created_at":1493026220,"resource_owner_id":71}'
+  recorded_at: Mon, 05 Oct 2020 20:51:44 GMT
+- request:
+    method: get
+    uri: https://s1.teachbase.ru/endpoint/v1/course_sessions?page&per_page
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Authorization:
+      - Bearer 1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 20:51:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Total:
+      - '8'
+      Per-Page:
+      - '10'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 92303065-4280-43cb-9cb0-cab0189dfa8d
+      X-Runtime:
+      - '0.038934'
+      X-Rack-Cache:
+      - miss
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":168,"name":"Open session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-11-01T18:55:02.269+03:00","course_id":104,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":169,"name":"Closed
+        session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-08-28T18:55:03.266+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28-18-51/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28-18-51","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":179,"name":"1234","started_at":"2016-08-08T22:44:00.000+03:00","finished_at":"2016-09-08T22:44:02.923+03:00","course_id":114,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/magic-elixir-course-08-08/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"magic-elixir-course-08-08","period":null,"course":{"id":114,"name":"Magic
+        Elixir Course","created_at":"2016-08-08T22:42:39.002+03:00","updated_at":"2018-11-11T12:17:30.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"12345","last_activity":null,"total_score":0,"total_tasks":0,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":392,"name":"1","started_at":"2016-12-30T10:58:00.000+03:00","finished_at":"2017-01-30T11:11:01.893+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-12-30/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-12-30","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":398,"name":"fuck
+        up123","started_at":"2017-01-17T13:10:00.000+03:00","finished_at":"2017-02-17T13:11:02.628+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-01-17/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-01-17","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":433,"name":"132","started_at":"2017-04-12T17:32:00.000+03:00","finished_at":"2017-05-12T17:33:01.868+03:00","course_id":333,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-course-duplication-04-12/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-course-duplication-04-12","period":null,"course":{"id":333,"name":"Test
+        course duplication","created_at":"2017-04-12T17:25:05.291+03:00","updated_at":"2018-11-11T12:17:31.082+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"1","last_activity":"2017-04-14T11:56:54.981+03:00","total_score":3,"total_tasks":2,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":442,"name":"test","started_at":"2017-04-13T16:28:00.000+03:00","finished_at":"2017-05-13T16:33:01.958+03:00","course_id":339,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-bad-stats-04-13/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-bad-stats-04-13","period":null,"course":{"id":339,"name":"Test
+        bad stats","created_at":"2017-04-13T16:28:23.834+03:00","updated_at":"2018-11-11T12:17:31.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"test","last_activity":"2017-04-13T16:33:39.835+03:00","total_score":4,"total_tasks":3,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":446,"name":"2","started_at":"2017-04-14T11:57:00.000+03:00","finished_at":"2017-05-14T12:11:02.209+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-04-14/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-04-14","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}}]'
+  recorded_at: Mon, 05 Oct 2020 20:51:44 GMT
+- request:
+    method: get
+    uri: https://s1.teachbase.ru/endpoint/v1/course_sessions?page=1&per_page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Authorization:
+      - Bearer 1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 21:54:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Link:
+      - <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=3&per_page=3>; rel="last",
+        <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=2&per_page=3>; rel="next"
+      Total:
+      - '8'
+      Per-Page:
+      - '3'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 4cda3fde-45ac-4e53-af43-80402be6374b
+      X-Runtime:
+      - '0.041905'
+      X-Rack-Cache:
+      - miss
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":168,"name":"Open session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-11-01T18:55:02.269+03:00","course_id":104,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":169,"name":"Closed
+        session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-08-28T18:55:03.266+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28-18-51/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28-18-51","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":179,"name":"1234","started_at":"2016-08-08T22:44:00.000+03:00","finished_at":"2016-09-08T22:44:02.923+03:00","course_id":114,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/magic-elixir-course-08-08/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"magic-elixir-course-08-08","period":null,"course":{"id":114,"name":"Magic
+        Elixir Course","created_at":"2016-08-08T22:42:39.002+03:00","updated_at":"2018-11-11T12:17:30.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"12345","last_activity":null,"total_score":0,"total_tasks":0,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}}]'
+  recorded_at: Mon, 05 Oct 2020 21:54:28 GMT
+- request:
+    method: get
+    uri: https://s1.teachbase.ru/endpoint/v1/course_sessions?page=2&per_page=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Authorization:
+      - Bearer 1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 21:54:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Link:
+      - <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=1&per_page=4>; rel="first",
+        <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=1&per_page=4>; rel="prev"
+      Total:
+      - '8'
+      Per-Page:
+      - '4'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - f0aaf103-159c-4e7e-9ec2-427292a51b6b
+      X-Runtime:
+      - '0.026038'
+      X-Rack-Cache:
+      - miss
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":398,"name":"fuck up123","started_at":"2017-01-17T13:10:00.000+03:00","finished_at":"2017-02-17T13:11:02.628+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-01-17/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-01-17","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":433,"name":"132","started_at":"2017-04-12T17:32:00.000+03:00","finished_at":"2017-05-12T17:33:01.868+03:00","course_id":333,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-course-duplication-04-12/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-course-duplication-04-12","period":null,"course":{"id":333,"name":"Test
+        course duplication","created_at":"2017-04-12T17:25:05.291+03:00","updated_at":"2018-11-11T12:17:31.082+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"1","last_activity":"2017-04-14T11:56:54.981+03:00","total_score":3,"total_tasks":2,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":442,"name":"test","started_at":"2017-04-13T16:28:00.000+03:00","finished_at":"2017-05-13T16:33:01.958+03:00","course_id":339,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-bad-stats-04-13/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-bad-stats-04-13","period":null,"course":{"id":339,"name":"Test
+        bad stats","created_at":"2017-04-13T16:28:23.834+03:00","updated_at":"2018-11-11T12:17:31.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"test","last_activity":"2017-04-13T16:33:39.835+03:00","total_score":4,"total_tasks":3,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":446,"name":"2","started_at":"2017-04-14T11:57:00.000+03:00","finished_at":"2017-05-14T12:11:02.209+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-04-14/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-04-14","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}}]'
+  recorded_at: Mon, 05 Oct 2020 21:54:28 GMT
+- request:
+    method: get
+    uri: https://s1.teachbase.ru/endpoint/v1/course_sessions?page&per_page
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Authorization:
+      - Bearer 1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 21:57:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Total:
+      - '8'
+      Per-Page:
+      - '10'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - 7b6c304e-0835-4fa1-a93a-f17260f4ec2c
+      X-Runtime:
+      - '0.033166'
+      X-Rack-Cache:
+      - miss
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":168,"name":"Open session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-11-01T18:55:02.269+03:00","course_id":104,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":169,"name":"Closed
+        session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-08-28T18:55:03.266+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28-18-51/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28-18-51","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":179,"name":"1234","started_at":"2016-08-08T22:44:00.000+03:00","finished_at":"2016-09-08T22:44:02.923+03:00","course_id":114,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/magic-elixir-course-08-08/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"magic-elixir-course-08-08","period":null,"course":{"id":114,"name":"Magic
+        Elixir Course","created_at":"2016-08-08T22:42:39.002+03:00","updated_at":"2018-11-11T12:17:30.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"12345","last_activity":null,"total_score":0,"total_tasks":0,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":392,"name":"1","started_at":"2016-12-30T10:58:00.000+03:00","finished_at":"2017-01-30T11:11:01.893+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-12-30/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-12-30","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":398,"name":"fuck
+        up123","started_at":"2017-01-17T13:10:00.000+03:00","finished_at":"2017-02-17T13:11:02.628+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-01-17/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-01-17","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":433,"name":"132","started_at":"2017-04-12T17:32:00.000+03:00","finished_at":"2017-05-12T17:33:01.868+03:00","course_id":333,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-course-duplication-04-12/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-course-duplication-04-12","period":null,"course":{"id":333,"name":"Test
+        course duplication","created_at":"2017-04-12T17:25:05.291+03:00","updated_at":"2018-11-11T12:17:31.082+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"1","last_activity":"2017-04-14T11:56:54.981+03:00","total_score":3,"total_tasks":2,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":442,"name":"test","started_at":"2017-04-13T16:28:00.000+03:00","finished_at":"2017-05-13T16:33:01.958+03:00","course_id":339,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-bad-stats-04-13/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-bad-stats-04-13","period":null,"course":{"id":339,"name":"Test
+        bad stats","created_at":"2017-04-13T16:28:23.834+03:00","updated_at":"2018-11-11T12:17:31.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"test","last_activity":"2017-04-13T16:33:39.835+03:00","total_score":4,"total_tasks":3,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":446,"name":"2","started_at":"2017-04-14T11:57:00.000+03:00","finished_at":"2017-05-14T12:11:02.209+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-04-14/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-04-14","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}}]'
+  recorded_at: Mon, 05 Oct 2020 21:57:14 GMT
+- request:
+    method: post
+    uri: https://s1.teachbase.ru/oauth/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials&client_id=f2289ec45da71c85f7841f3760bc0b7426e18ca63f3167c00ed77643b199d39e&client_secret=bb7966f39349a2406c6d428f134c52bc71d4e4c53565ddb97efd7fa078a97090
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Content-Length:
+      - '183'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 22:11:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Host-Signature:
+      - dbdf0e8172df0870dba1dfc451f2ac9ae59fff8893cb59a9c4888e73418020a5
+      Cache-Control:
+      - private, no-store
+      Pragma:
+      - no-cache
+      X-Request-Id:
+      - 04f6f07b-6f55-4322-a2dc-d37918eb33fe
+      X-Runtime:
+      - '0.032861'
+      X-Rack-Cache:
+      - invalidate, pass
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d","token_type":"Bearer","created_at":1493026220,"resource_owner_id":71}'
+  recorded_at: Mon, 05 Oct 2020 22:11:07 GMT
+- request:
+    method: get
+    uri: https://s1.teachbase.ru/endpoint/v1/course_sessions?page=1&per_page=3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Authorization:
+      - Bearer 1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 22:11:07 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Link:
+      - <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=3&per_page=3>; rel="last",
+        <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=2&per_page=3>; rel="next"
+      Total:
+      - '8'
+      Per-Page:
+      - '3'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - bcd5b22e-f583-4bf5-93a6-25175feecb20
+      X-Runtime:
+      - '0.026214'
+      X-Rack-Cache:
+      - miss
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":168,"name":"Open session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-11-01T18:55:02.269+03:00","course_id":104,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":169,"name":"Closed
+        session","started_at":"2016-07-28T18:51:00.000+03:00","finished_at":"2016-08-28T18:55:03.266+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-07-28-18-51/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"tb-api-course-07-28-18-51","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":179,"name":"1234","started_at":"2016-08-08T22:44:00.000+03:00","finished_at":"2016-09-08T22:44:02.923+03:00","course_id":114,"infinitely":false,"access_type":"open","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/magic-elixir-course-08-08/apply","deadline_soon":false,"assignments_count":0,"deadline_type":1,"slug":"magic-elixir-course-08-08","period":null,"course":{"id":114,"name":"Magic
+        Elixir Course","created_at":"2016-08-08T22:42:39.002+03:00","updated_at":"2018-11-11T12:17:30.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"12345","last_activity":null,"total_score":0,"total_tasks":0,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}}]'
+  recorded_at: Mon, 05 Oct 2020 22:11:07 GMT
+- request:
+    method: get
+    uri: https://s1.teachbase.ru/endpoint/v1/course_sessions?page=2&per_page=4
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*"
+      User-Agent:
+      - rest-client/2.1.0 (darwin19.4.0 x86_64) ruby/2.7.0p0
+      Authorization:
+      - Bearer 1a936365a4708e00e71de91427beb4156eaaaf984f8b7c2177f01a0884bb033d
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - s1.teachbase.ru
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.6 (Ubuntu)
+      Date:
+      - Mon, 05 Oct 2020 22:11:07 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      - "*"
+      Access-Control-Request-Method:
+      - "*"
+      Link:
+      - <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=1&per_page=4>; rel="first",
+        <http://s1.teachbase.ru/endpoint/v1/course_sessions?page=1&per_page=4>; rel="prev"
+      Total:
+      - '8'
+      Per-Page:
+      - '4'
+      Cache-Control:
+      - must-revalidate, private, max-age=0
+      X-Request-Id:
+      - ae52ce24-a0d2-476e-8567-06ac6990d377
+      X-Runtime:
+      - '0.040036'
+      X-Rack-Cache:
+      - miss
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET
+      X-Frame-Options:
+      - ALLOW-FROM https://code.jivosite.com
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":398,"name":"fuck up123","started_at":"2017-01-17T13:10:00.000+03:00","finished_at":"2017-02-17T13:11:02.628+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-01-17/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-01-17","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":433,"name":"132","started_at":"2017-04-12T17:32:00.000+03:00","finished_at":"2017-05-12T17:33:01.868+03:00","course_id":333,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-course-duplication-04-12/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-course-duplication-04-12","period":null,"course":{"id":333,"name":"Test
+        course duplication","created_at":"2017-04-12T17:25:05.291+03:00","updated_at":"2018-11-11T12:17:31.082+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"1","last_activity":"2017-04-14T11:56:54.981+03:00","total_score":3,"total_tasks":2,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":442,"name":"test","started_at":"2017-04-13T16:28:00.000+03:00","finished_at":"2017-05-13T16:33:01.958+03:00","course_id":339,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/test-bad-stats-04-13/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"test-bad-stats-04-13","period":null,"course":{"id":339,"name":"Test
+        bad stats","created_at":"2017-04-13T16:28:23.834+03:00","updated_at":"2018-11-11T12:17:31.087+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":null,"cover_url":null,"description":"test","last_activity":"2017-04-13T16:33:39.835+03:00","total_score":4,"total_tasks":3,"is_netology":false,"bg_url":null,"video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}},{"id":446,"name":"2","started_at":"2017-04-14T11:57:00.000+03:00","finished_at":"2017-05-14T12:11:02.209+03:00","course_id":104,"infinitely":false,"access_type":"privy","finished":true,"navigation":0,"apply_url":"http://s1.teachbase.ru/course_sessions/tb-api-course-04-14/apply","deadline_soon":false,"assignments_count":1,"deadline_type":1,"slug":"tb-api-course-04-14","period":null,"course":{"id":104,"name":"TB
+        API Course","created_at":"2016-07-28T18:50:13.280+03:00","updated_at":"2018-11-11T12:17:30.048+03:00","owner_id":1031,"content_type":1,"owner_name":"alekseenko
+        sergei","thumb_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/thumb/f8d02fe8236df56b24cd7669a11580098612e94a.jpg?1469721011","cover_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/icons/small/4b280bd13fb2e51ee8610c5ecc9d2d79f6e09268.jpg?1469721011","description":"Test
+        course for checking Endpoint API","last_activity":"2017-04-14T11:59:55.191+03:00","total_score":14,"total_tasks":7,"is_netology":false,"bg_url":"https://tbconvert.storage.yandexcloud.net/system/courses/104/bgs/original/1681b6a0dc917d9f24ff8a17f57f60ced8566684.jpg?1469721013","video_url":"","demo":false,"unchangeable":false,"include_weekly_report":false,"custom_author_names":null,"types":[]}}]'
+  recorded_at: Mon, 05 Oct 2020 22:11:07 GMT
+recorded_with: VCR 6.0.0
